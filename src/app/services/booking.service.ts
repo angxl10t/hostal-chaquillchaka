@@ -18,7 +18,7 @@ export class BookingService {
       guests: request.guests,
       paymentMethod: request.paymentMethod,
       paymentCurrency: request.paymentCurrency,
-      status: 'pending',
+      status: 'confirmed',
       totalPen: 120, // valor simulado
       totalUsd: 35,  // valor simulado
       createdAt: new Date().toISOString()
