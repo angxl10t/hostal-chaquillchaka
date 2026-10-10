@@ -6,25 +6,36 @@ import { Booking, BookingRequest } from '../models/booking.interface';
 export class BookingService {
   
   createBooking(request: BookingRequest): Observable<Booking> {
-    // Simulamos la respuesta del servidor ya que no hay backend desplegado en GitHub Pages
+    const checkInDate = new Date(request.checkIn);
+    const checkOutDate = new Date(request.checkOut);
+    const nights = Math.round((checkOutDate.getTime() - checkInDate.getTime()) / (1000 * 3600 * 24));
+    
     const mockBooking: Booking = {
-      _id: Math.random().toString(36).substring(2, 9),
-      roomId: request.roomId,
-      name: request.name,
-      email: request.email,
-      phone: request.phone,
+      id: Math.random().toString(36).substring(2, 9),
+      customer: {
+        name: request.name,
+        email: request.email,
+        phone: request.phone
+      },
+      room: {
+        id: request.roomId,
+        name: 'Habitación reservada',
+        pricePen: 100,
+        priceUsd: 30
+      },
       checkIn: request.checkIn,
       checkOut: request.checkOut,
       guests: request.guests,
+      nights: nights,
+      pricePerNightPen: 100,
+      totalPen: 100 * nights,
+      pricePerNightUsd: 30,
+      totalUsd: 30 * nights,
       paymentMethod: request.paymentMethod,
       paymentCurrency: request.paymentCurrency,
-      status: 'confirmed',
-      totalPen: 120, // valor simulado
-      totalUsd: 35,  // valor simulado
-      createdAt: new Date().toISOString()
+      status: 'confirmed'
     };
     
-    // Retornamos el observable simulando un poco de retraso de red
     return of(mockBooking).pipe(delay(800));
   }
 }
