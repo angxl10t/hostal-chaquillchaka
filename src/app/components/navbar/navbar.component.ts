@@ -10,7 +10,7 @@ import { RouterModule } from '@angular/router';
     <header class="sticky top-0 z-40 border-b border-stone-200/80 bg-white/95 backdrop-blur">
       <div class="page-shell flex min-h-[76px] items-center justify-between gap-5">
         <a routerLink="/inicio" class="brand flex items-center gap-3 no-underline" aria-label="Chaquill Chak'a, inicio">
-          <img class="brand-logo" src="/assets/images/chaquillchaja-logo.png" alt="Chaquill Chak'a, desde 2008">
+          <img class="brand-logo" src="https://www.chaquillchaka.com.pe/assets/images/chaquillchaja-logo.png" alt="Chaquill Chak'a, desde 2008">
         </a>
         <button
           type="button"

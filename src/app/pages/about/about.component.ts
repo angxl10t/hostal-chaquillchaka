@@ -180,7 +180,7 @@ import { RouterModule } from '@angular/router';
   styles: [`
     .page-banner,.review-section{background:#f2f1eb}
     .story-layout{display:grid;grid-template-columns:1fr 1fr;gap:clamp(35px,8vw,95px);align-items:center;padding-block:75px}
-    .story-photo{min-height:440px;border-radius:7px;background:#ddd4c5 url('/assets/images/slide_PatioD%C3%ADa1.jpg') center/cover}
+    .story-photo{min-height:440px;border-radius:7px;background:#ddd4c5 url('https://www.chaquillchaka.com.pe/assets/images/slide_PatioD%C3%ADa1.jpg') center/cover}
     .review-header{display:flex;justify-content:space-between;align-items:end;gap:30px}
     .booking-score{display:flex;align-items:center;gap:15px;border-radius:7px;background:#183b32;padding:17px 22px;color:white;text-decoration:none}
     .score-number{font-size:30px;font-weight:800;letter-spacing:-.04em}

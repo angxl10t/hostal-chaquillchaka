@@ -77,7 +77,7 @@ import { RoomService } from '../../services/room.service';
     .intro-copy p { margin:0 0 20px; }
     .rooms-section { background:#f2f1eb; }
     .experience { display:grid; grid-template-columns:1.1fr .9fr; gap:clamp(35px,8vw,100px); align-items:center; padding-block:90px; }
-    .experience-photo { min-height:370px; border-radius:6px; background:#d3cabe url('/assets/images/slide_PatioD%C3%ADa1.jpg') center/cover; }
+    .experience-photo { min-height:370px; border-radius:6px; background:#d3cabe url('https://www.chaquillchaka.com.pe/assets/images/slide_PatioD%C3%ADa1.jpg') center/cover; }
     .experience-copy .section-title { max-width:510px; }
     @media(max-width:700px) {
       .hero{min-height:590px;background-position:58% center}.hero-overlay{background:linear-gradient(90deg,#111f1bdc 0%,#111f1ba8 70%,#111f1b68)}

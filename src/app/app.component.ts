@@ -24,7 +24,7 @@ import { Component } from '@angular/core';
           </a>
         </div>
         <a routerLink="/inicio" class="footer-logo" aria-label="Chaquill Chak'a, volver al inicio">
-          <img src="/assets/images/chaquillchaja-logo.png" alt="Chaquill Chak'a desde 2008">
+          <img src="https://www.chaquillchaka.com.pe/assets/images/chaquillchaja-logo.png" alt="Chaquill Chak'a desde 2008">
         </a>
         <div class="footer-contact">
           <a href="tel:+5184211511">Teléfono: +51 84 211 511</a>

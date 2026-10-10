@@ -149,7 +149,7 @@ import { Room } from '../../models/room.interface';
 })
 export class RoomCardComponent {
   @Input({ required: true }) room!: Room;
-  readonly fallbackImage = '/assets/images/slide_habitacion.jpg';
+  readonly fallbackImage = 'https://www.chaquillchaka.com.pe/assets/images/slide_habitacion.jpg';
   galleryOpen = false;
   galleryImages: string[] = [];
   galleryCaptions: string[] = [];
@@ -162,7 +162,7 @@ export class RoomCardComponent {
       Matrimonial: 'habitacion-matrimonial.jpg',
       Familiar: 'Habitacion familiar(2).jpg'
     };
-    return `/assets/images/${encodeURIComponent(imageByType[this.room.type])}`;
+    return `https://www.chaquillchaka.com.pe/assets/images/${encodeURIComponent(imageByType[this.room.type])}`;
   }
 
   get bedDescription(): string {
@@ -186,21 +186,21 @@ export class RoomCardComponent {
     const photosByType: Record<Room['type'], Array<{ src: string; caption: string }>> = {
       Simple: [
         { src: this.roomImageUrl, caption: 'Habitación simple' },
-        { src: '/assets/images/Desayuno%202.jpg', caption: 'Desayuno continental' }
+        { src: 'https://www.chaquillchaka.com.pe/assets/images/Desayuno%202.jpg', caption: 'Desayuno continental' }
       ],
       Doble: [
         { src: this.roomImageUrl, caption: 'Habitación doble' },
-        { src: '/assets/images/Desayuno%202.jpg', caption: 'Desayuno continental' }
+        { src: 'https://www.chaquillchaka.com.pe/assets/images/Desayuno%202.jpg', caption: 'Desayuno continental' }
       ],
       Matrimonial: [
         { src: this.roomImageUrl, caption: 'Habitación matrimonial' },
-        { src: '/assets/images/Desayuno%201.jpg', caption: 'Desayuno continental' },
-        { src: '/assets/images/Desayuno%202.jpg', caption: 'Desayuno continental' }
+        { src: 'https://www.chaquillchaka.com.pe/assets/images/Desayuno%201.jpg', caption: 'Desayuno continental' },
+        { src: 'https://www.chaquillchaka.com.pe/assets/images/Desayuno%202.jpg', caption: 'Desayuno continental' }
       ],
       Familiar: [
         { src: this.roomImageUrl, caption: 'Habitación familiar' },
-        { src: '/assets/images/slide_habitacion.jpg', caption: 'Habitación familiar' },
-        { src: '/assets/images/Desayuno%201.jpg', caption: 'Desayuno continental' }
+        { src: 'https://www.chaquillchaka.com.pe/assets/images/slide_habitacion.jpg', caption: 'Habitación familiar' },
+        { src: 'https://www.chaquillchaka.com.pe/assets/images/Desayuno%201.jpg', caption: 'Desayuno continental' }
       ]
     };
     const slides = photosByType[this.room.type];
