@@ -51,8 +51,8 @@ import { RoomService } from '../../services/room.service';
             </label>
             <label class="field">
               <span>Teléfono / WhatsApp <span aria-hidden="true">*</span></span>
-              <input class="form-control" type="tel" formControlName="phone" autocomplete="tel" placeholder="+51 987 654 321" [attr.aria-invalid]="showError('phone')" aria-describedby="phone-error">
-              <small *ngIf="showError('phone')" id="phone-error" class="field-error">Ingresa un teléfono válido.</small>
+              <input class="form-control" type="tel" formControlName="phone" autocomplete="tel" placeholder="+51987654321" [attr.aria-invalid]="showError('phone')" aria-describedby="phone-error">
+              <small *ngIf="showError('phone')" id="phone-error" class="field-error">Ingresa un número válido (ej. +51987654321).</small>
             </label>
             <label class="field sm:col-span-2">
               <span>Habitación <span aria-hidden="true">*</span></span>
@@ -160,7 +160,7 @@ export class BookingComponent implements OnInit {
   readonly bookingForm = this.formBuilder.group({
     name: ['', [Validators.required, Validators.minLength(2), Validators.maxLength(100)]],
     email: ['', [Validators.required, Validators.email, Validators.maxLength(254)]],
-    phone: ['', [Validators.required, Validators.pattern(/^[+()\d\s.-]{7,20}$/)]],
+    phone: ['', [Validators.required, Validators.pattern(/^\+?[0-9]{9,15}$/)]],
     roomId: ['', Validators.required],
     checkIn: [this.today, Validators.required],
     checkOut: ['', Validators.required],
